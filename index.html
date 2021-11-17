@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델, 다양한 테두리</title>
+    <style>
+        div {
+            background: gray;
+            padding: 20px;
+            border: 5px dotted darkolivegreen;
+            margin: 30px; 
+        }
+        .p-border {
+            width: 300px;
+            height: 200px;
+            border-top: 5px dashed blue;
+            border-right: 10px dotted red;
+            border-bottom: 15px solid green;
+            border-left: 20px double brown;
+
+            /* margin과 padding이 사용방법이 동일함 */
+            /* 4방향에 대해서 동일한 값 넣기 */
+            /* padding: 50px; */
+
+            /* 4방향에 대해서 다른값 지정하기 */
+            /* 순서는 top, right, bottom, left 순서 */
+            /* padding: 10px 20px 30px 40px; */
+
+            /* 2방향에 대해서 다른값 지정하기 */
+            /* y축, x축 */
+            /* top,bottom을 같은 값, left,right를 같은 값 사용 */
+            /* padding: 20px 20x; */
+
+            /* 각각의 방향에 다른 값 사용하기 */
+            /* 기본값 설정 후 필요한 방향에 대한 값을 따로 설정시 사용 */
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+
+            /* margin과 padding의 다른 점은 padding은 다른 태그와 영역이 겹치지 않음 */
+            /* margin은 다른 태그와 영역이 겹침 */
+         }
+         .box {
+             width: 200px;
+             height: 200px;
+             border: 1px solid black;
+         }
+         .red {
+             background: red;
+             margin: 50px;
+        }
+         .blue {background: blue;}
+         .yellow {
+             background: yellow;
+             width: 100px;
+             height: 100px;
+         }
+    </style>
+</head>
+<body>
+    <h3>박스 모델</h3>
+    <hr>
+    <p>
+        margin 30px, padding 20px, border 5px의 빨간색 점선
+    </p>
+    <div>
+        <img src="./검은 고양이.jpg" alt="검은 고양이">
+    </div>
+
+    <br><hr><br>
+
+    <div>
+        <h3>다양한 테두리</h3>
+        <hr>
+        <p style="border: 3px solid blue;">3픽셀 solid</p>
+        <p style="border: 3px none blue;">3픽셀none</p>
+        <p style="border: 3px hidden blue;">3픽셀 hidden</p>
+        <p style="border: 3px dotted blue;">3픽셀 dotted</p>
+        <p style="border: 3px dashed blue;">3픽셀 dashe</p>
+        <p style="border: 3px double blue;">3픽셀 double</p>
+        <p style="border: 15px groove yellow;">15픽셀 groove</p>
+        <p style="border: 15px ridge yellow;">15픽셀 ridge</p>
+        <p style="border: 15px inset yellow;">15픽셀 inset</p>
+        <p style="border: 15px outset yellow;">15픽셀 outset</p>
+
+        <p class="p-border">4방향 다르게 입력하기</p>
+
+        <br><hr><br>
+        
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        <div class="box yellow"></div>
+    </div>
+</body>
+</html>
